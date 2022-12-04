@@ -54,9 +54,12 @@ schema:name a owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
-ct:ContainsDocument rdfs:equivalentProperty ldp:contains,
-                                        ldp:hasMemberRelation,
-                                        lpd:isMemberOfRelation,
-
 ct:Container rdfs:equivalentClass ldp:Container.
 ct:InternalDocument rdfs:equivalentClass ldp:Resource.
+
+#################################################################
+#    Properties
+#################################################################
+ct:ContainsDocument rdfs:equivalentProperty ldp:contains,
+                                        ldp:hasMemberRelation,
+                                        lpd:isMemberOfRelation.
