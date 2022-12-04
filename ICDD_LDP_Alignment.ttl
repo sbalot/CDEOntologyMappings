@@ -1,0 +1,62 @@
+# Copyright 2020-2023 Madhumitha Senthilvel.
+
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix : <https://w3id.org/bot/IFCOWL4_ADD2Alignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix ct: <https://standards.iso.org/iso/21597/-1/ed-1/en/Container> .
+@prefix ldp: <http://w3.org/ns/ldp#> .
+@base <https://w3id.org/bot/IFCOWL4_ADD2Alignment> .
+
+<https://w3id.org/bot/IFCOWL4_ADD2Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+    dcterms:title "ISO 21597 to LDP alignment"@en ;
+    dcterms:description """This ontology defines proposed alignments with the ISO 21597 ICDD ontology"""@en ;
+    dcterms:issued "2022-12-04"^^xsd:date ;
+    dcterms:modified "2022-12-25"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    owl:versionInfo "v1.0.0" ;
+    owl:versionIRI <github> ;
+    owl:priorVersion <github> ;
+    rdfs:seeAlso <xxx> ;
+    dcterms:creator <https://orcid.org/0000-0003-0733-9157> ;
+    dcterms:creator "Madhumitha Senthilvel" ;
+    owl:imports 	<https://standards.iso.org/iso/21597/-1/ed-1/en/Container> ,
+                    <http://w3.org/ns/ldp#> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
+
+<https://orcid.org/0000-0003-0733-9157> a vcard:Individual , schema:Person; 
+    vcard:fn    "Madhumitha Senthilvel" ;
+    schema:name "Madhumitha Senthilvel" .
+
+#################################################################
+#    Classes
+#################################################################
+ct:ContainsDocument rdfs:equivalentProperty ldp:contains,
+                                        ldp:hasMemberRelation,
+                                        lpd:isMemberOfRelation,
+
+ct:Container rdfs:equivalentClass ldp:Container.
+ct:InternalDocument rdfs:equivalentClass ldp:Resource.
